@@ -1,0 +1,87 @@
+﻿@model IEnumerable<PNet_HomeWork.Models.Fish>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("River name")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShortName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScientificName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Width)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Length)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SwimmingCharacteristics.HasBag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SwimmingCharacteristics.AverageDepth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SwimmingCharacteristics.AverageSpeed)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.River.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShortName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScientificName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Width)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Height)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Length)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SwimmingCharacteristics.HasBag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SwimmingCharacteristics.AverageDepth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SwimmingCharacteristics.AverageSpeed)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.FishId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.FishId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.FishId })
+        </td>
+    </tr>
+}
+
+</table>

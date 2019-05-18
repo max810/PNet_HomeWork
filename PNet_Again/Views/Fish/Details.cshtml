@@ -1,0 +1,74 @@
+﻿@model PNet_HomeWork.Models.Fish
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Fish</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.River.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.River.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScientificName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScientificName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Width)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Width)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Length)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Length)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FishId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
